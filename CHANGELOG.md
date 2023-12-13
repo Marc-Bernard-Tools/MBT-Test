@@ -14,21 +14,10 @@ and [ISO Date Format](https://www.iso.org/iso-8601-date-and-time-format.html).
 
 ### Fixed
 
+## Version [1.0.0] - 2023-12-12
 
-## Version [1.2.0] - 2021-12-08
-
-Public Release
-
-## Version [1.1.0] - 2021-04-13
-
-Launch Release
-
-## Version [1.0.0] - 2021-03-16
-
-Initial Release. For details, see [Features](https://marcbernardtools.com/docs/mbt-xxx/features).
+Initial Release. For details, see [Features](https://marcbernardtools.com/docs/mbt-test/features).
 
 
-[Unreleased]: https://github.com/Marc-Bernard-Tools/MBT-XXX/compare/1.2.0...main
-[1.2.0]: https://github.com/Marc-Bernard-Tools/MBT-XXX/compare/1.1.0...1.2.0
-[1.1.0]: https://github.com/Marc-Bernard-Tools/MBT-XXX/compare/1.0.0...1.1.0
-[1.0.0]: https://github.com/Marc-Bernard-Tools/MBT-XXX/releases/tag/1.0.0
+[Unreleased]: https://github.com/Marc-Bernard-Tools/MBT-Test/compare/1.0.0...main
+[1.0.0]: https://github.com/Marc-Bernard-Tools/MBT-Test/releases/tag/1.0.0
