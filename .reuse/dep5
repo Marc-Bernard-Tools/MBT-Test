@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Marc Bernard Tools - XXX
+Upstream-Contact: Marc Bernard <hello@marcbernardtools.com>
+Source: https://github.com/Marc-Bernard-Tools/MBT-XXX
+
+Files: *
+Copyright: 2023 Marc Bernard <https://marcbernardtools.com/>
+License: GPL-3.0-only
