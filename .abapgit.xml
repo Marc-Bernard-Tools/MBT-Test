@@ -19,7 +19,7 @@
     <LOGO>/MBTOOLS/MBT_TEST_TN</LOGO>
     <DEPENDENCIES>
      <item>
-      <NAME>mbt-base</NAME>
+      <NAME>mbt-package-manager</NAME>
       <VERSION>1.4.0</VERSION>
      </item>
     </DEPENDENCIES>
