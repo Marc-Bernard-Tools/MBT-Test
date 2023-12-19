@@ -4,7 +4,12 @@
       "files": "/src/**/*.*",
       "folder": "/deps",
       "url": "https://github.com/abaplint/deps"
-    }
+    },
+    {
+      "files": "/src/**/*.*",
+      "folder": "/deps2",
+      "url": "https://github.com/Marc-Bernard-Tools/MBT-Package-Manager"
+    }    
   ],
   "global": {
     "exclude": [],
@@ -698,7 +703,9 @@
     "no_prefixes": {
       "constants": "^[lg]c_",
       "data": "^[lg].?_",
-      "exclude": [],
+      "exclude": [
+        ".*"
+      ],
       "fieldSymbols": "^<l.?_",
       "methodParameters": "^[ierc].?_",
       "severity": "Error",
