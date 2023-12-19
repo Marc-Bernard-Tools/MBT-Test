@@ -66,24 +66,24 @@ CONSTANTS:
   c_title TYPE string VALUE /mbtools/cl_tool_bc_test=>c_tool-title.
 
 DATA:
-  ok_code TYPE sy-ucomm,
-  tool    TYPE REF TO /mbtools/cl_tool,
-  screen  TYPE REF TO /mbtools/cl_screen,
-  app     TYPE REF TO /mbtools/cl_test.
+  gv_ok_code TYPE sy-ucomm,
+  go_tool    TYPE REF TO /mbtools/cl_tool,
+  go_screen  TYPE REF TO /mbtools/cl_screen,
+  go_app     TYPE REF TO /mbtools/cl_test.
 
 *-----------------------------------------------------------------------
 
 MODULE pbo_100 OUTPUT.
 
-  screen->banner( abap_false ).
+  go_screen->banner( abap_false ).
 
-  app->pbo( ).
+  go_app->pbo( ).
 
 ENDMODULE.
 
 MODULE pai_100 INPUT.
 
-  app->pai( CHANGING cv_ok_code = ok_code ).
+  go_app->pai( CHANGING cv_ok_code = gv_ok_code ).
 
 ENDMODULE.
 
@@ -94,12 +94,12 @@ INITIALIZATION.
     RETURN.
   ENDIF.
 
-  CREATE OBJECT app.
+  CREATE OBJECT go_app.
 
-  tool   = /mbtools/cl_tool_manager=>factory( c_title ).
-  screen = /mbtools/cl_screen=>factory( c_title ).
+  go_tool   = /mbtools/cl_tool_manager=>factory( c_title ).
+  go_screen = /mbtools/cl_screen=>factory( c_title ).
 
-  screen->init(
+  go_screen->init(
     IMPORTING
       ev_text      = sc_t001
       ev_about     = sc_tab9
@@ -111,7 +111,7 @@ INITIALIZATION.
       ev_home      = sc_home
       ev_lice      = sc_lice ).
 
-  sc_tab2 = screen->header(
+  sc_tab2 = go_screen->header(
     iv_icon = icon_color
     iv_text = 'Test' ).
 
@@ -122,17 +122,17 @@ INITIALIZATION.
 
 AT SELECTION-SCREEN.
 
-  app->screen( ).
+  go_app->screen( ).
 
-  screen->ucomm( sscrfields-ucomm ).
+  go_screen->ucomm( sscrfields-ucomm ).
 
 *-----------------------------------------------------------------------
 
 AT SELECTION-SCREEN OUTPUT.
 
-  screen->banner( ).
+  go_screen->banner( ).
 
-  app->screen( ).
+  go_app->screen( ).
 
 *-----------------------------------------------------------------------
 
@@ -141,4 +141,4 @@ START-OF-SELECTION.
   LOG-POINT ID /mbtools/bc SUBKEY c_title FIELDS sy-datum sy-uzeit sy-uname.
 
   " Setup tree
-  app->initialize( p_test ).
+  go_app->initialize( p_test ).
