@@ -655,7 +655,7 @@
     },
     "modify_only_own_db_tables": {
       "exclude": [],
-      "ownTables": "^(/MBTOOLS/",
+      "ownTables": "^/MBTOOLS/",
       "reportDynamic": false,
       "severity": "Error"
     },
