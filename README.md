@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/Marc-Bernard-Tools/MBT-Test?label=License&color=green)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?color=green)](https://github.com/Marc-Bernard-Tools/.github/blob/main/CODE_OF_CONDUCT.md)
 [![REUSE Status](https://api.reuse.software/badge/github.com/Marc-Bernard-Tools/MBT-Test?color=success)](https://api.reuse.software/info/github.com/Marc-Bernard-Tools/MBT-Test)
-[![ClearlyDefined Score](https://img.shields.io/clearlydefined/score/git/github/marc-bernard-tools/MBT-Test/commit?label=ClearlyDefined%20Score)](https://clearlydefined.io/definitions/git/github/marc-bernard-tools/mbt-test/0d4df2529cd8da727f960a8d5e082f094774a48d)
+[![ClearlyDefined Score](https://img.shields.io/clearlydefined/score/git/github/marc-bernard-tools/mbt-test/commit?label=ClearlyDefined%20Score)](https://clearlydefined.io/definitions/git/github/marc-bernard-tools/mbt-test/0d4df2529cd8da727f960a8d5e082f094774a48d)
 
 # MBT Test
 
