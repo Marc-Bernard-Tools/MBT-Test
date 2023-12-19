@@ -18,8 +18,7 @@ COMMENT /1(77) sc_t200,
 COMMENT /1(77) sc_t201,
 END OF BLOCK b200,
 BEGIN OF BLOCK b210 WITH FRAME.
-PARAMETERS:
-  p_test AS CHECKBOX DEFAULT 'X'.
+PARAMETERS p_test AS CHECKBOX DEFAULT 'X'.
 SELECTION-SCREEN:
 END OF BLOCK b210,
 END OF SCREEN 200.
@@ -67,24 +66,24 @@ CONSTANTS:
   c_title TYPE string VALUE /mbtools/cl_tool_bc_test=>c_tool-title.
 
 DATA:
-  gv_ok_code TYPE sy-ucomm,
-  go_tool    TYPE REF TO /mbtools/cl_tool,
-  go_screen  TYPE REF TO /mbtools/cl_screen,
-  go_app     TYPE REF TO /mbtools/cl_test.
+  ok_code TYPE sy-ucomm,
+  tool    TYPE REF TO /mbtools/cl_tool,
+  screen  TYPE REF TO /mbtools/cl_screen,
+  app     TYPE REF TO /mbtools/cl_test.
 
 *-----------------------------------------------------------------------
 
 MODULE pbo_100 OUTPUT.
 
-  go_screen->banner( abap_false ).
+  screen->banner( abap_false ).
 
-  go_app->pbo( ).
+  app->pbo( ).
 
 ENDMODULE.
 
 MODULE pai_100 INPUT.
 
-  go_app->pai( CHANGING cv_ok_code = gv_ok_code ).
+  app->pai( CHANGING cv_ok_code = ok_code ).
 
 ENDMODULE.
 
@@ -95,12 +94,12 @@ INITIALIZATION.
     RETURN.
   ENDIF.
 
-  CREATE OBJECT go_app.
+  CREATE OBJECT app.
 
-  go_tool   = /mbtools/cl_tool_manager=>factory( c_title ).
-  go_screen = /mbtools/cl_screen=>factory( c_title ).
+  tool   = /mbtools/cl_tool_manager=>factory( c_title ).
+  screen = /mbtools/cl_screen=>factory( c_title ).
 
-  go_screen->init(
+  screen->init(
     IMPORTING
       ev_text      = sc_t001
       ev_about     = sc_tab9
@@ -112,7 +111,7 @@ INITIALIZATION.
       ev_home      = sc_home
       ev_lice      = sc_lice ).
 
-  sc_tab2 = go_screen->header(
+  sc_tab2 = screen->header(
     iv_icon = icon_color
     iv_text = 'Test' ).
 
@@ -123,17 +122,17 @@ INITIALIZATION.
 
 AT SELECTION-SCREEN.
 
-  go_app->screen( ).
+  app->screen( ).
 
-  go_screen->ucomm( sscrfields-ucomm ).
+  screen->ucomm( sscrfields-ucomm ).
 
 *-----------------------------------------------------------------------
 
 AT SELECTION-SCREEN OUTPUT.
 
-  go_screen->banner( ).
+  screen->banner( ).
 
-  go_app->screen( ).
+  app->screen( ).
 
 *-----------------------------------------------------------------------
 
@@ -142,4 +141,4 @@ START-OF-SELECTION.
   LOG-POINT ID /mbtools/bc SUBKEY c_title FIELDS sy-datum sy-uzeit sy-uname.
 
   " Setup tree
-  go_app->initialize( p_test ).
+  app->initialize( p_test ).

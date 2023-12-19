@@ -13,13 +13,12 @@ CLASS /mbtools/cl_test DEFINITION
 
     METHODS initialize
       IMPORTING
-        iv_test TYPE abap_bool.
+        test TYPE abap_bool.
     METHODS pbo.
     METHODS pai
       CHANGING
-        !cv_ok_code TYPE sy-ucomm.
+        !ok_code TYPE sy-ucomm.
     METHODS screen.
-
   PROTECTED SECTION.
   PRIVATE SECTION.
 
@@ -31,7 +30,7 @@ CLASS /mbtools/cl_test IMPLEMENTATION.
 
 
   METHOD initialize.
-    IF iv_test = abap_true.
+    IF test = abap_true.
       MESSAGE 'Test ON' TYPE 'I'.
     ELSE.
       MESSAGE 'Test OFF' TYPE 'I'.
@@ -40,16 +39,14 @@ CLASS /mbtools/cl_test IMPLEMENTATION.
 
 
   METHOD pai.
-    CLEAR cv_ok_code.
+    CLEAR ok_code.
   ENDMETHOD.
 
 
   METHOD pbo.
-    RETURN.
   ENDMETHOD.
 
 
   METHOD screen.
-    ASSERT 0 = 0.
   ENDMETHOD.
 ENDCLASS.
