@@ -7,11 +7,11 @@
 
 # MBT Test
 
-<description>
+<!--description-->
 
 For details, visit **[Marc Bernard Tools](https://marcbernardtools.com/downloads/mbt-test)** and follow [@marcfbe](https://twitter.com/marcfbe) on Twitter.
 
-<images>
+<!--images-->
 
 ## Installation
 
