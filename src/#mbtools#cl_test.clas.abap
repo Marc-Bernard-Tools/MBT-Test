@@ -4,7 +4,7 @@ CLASS /mbtools/cl_test DEFINITION
   CREATE PUBLIC.
 
 ************************************************************************
-* MBT Test Tool
+* MBT Test Class
 *
 * Copyright 2023 Marc Bernard <https://marcbernardtools.com/>
 * SPDX-License-Identifier: GPL-3.0-only
@@ -31,9 +31,9 @@ CLASS /mbtools/cl_test IMPLEMENTATION.
 
   METHOD initialize.
     IF iv_test = abap_true.
-      MESSAGE 'Test ON' TYPE 'I'.
+      MESSAGE 'Test ON' TYPE 'I' ##NO_TEXT.
     ELSE.
-      MESSAGE 'Test OFF' TYPE 'I'.
+      MESSAGE 'Test OFF' TYPE 'I' ##NO_TEXT.
     ENDIF.
   ENDMETHOD.
 
@@ -44,9 +44,11 @@ CLASS /mbtools/cl_test IMPLEMENTATION.
 
 
   METHOD pbo.
+    ASSERT 0 = 0.
   ENDMETHOD.
 
 
   METHOD screen.
+    ASSERT 0 = 0.
   ENDMETHOD.
 ENDCLASS.
