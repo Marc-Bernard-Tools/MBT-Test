@@ -1,7 +1,8 @@
 ![Version](https://img.shields.io/endpoint?url=https%3A%2F%2Fshield.abap.space%2Fversion-shield-json%2Fgithub%2FMarc-Bernard-Tools%2FMBT-Test%2Fsrc%2F%2523mbtools%2523cl_tool_bc_test.clas.abap&label=Version&color=blue)
+[![Slack](https://img.shields.io/badge/Join-Slack-blue)](https://communityinviter.com/apps/marc-bernard-tools/join-our-slack-community)
 
-[![License](https://img.shields.io/github/license/Marc-Bernard-Tools/MBT-Test?label=License&color=green)](LICENSE)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?color=green)](https://github.com/Marc-Bernard-Tools/.github/blob/main/CODE_OF_CONDUCT.md)
+[![License](https://img.shields.io/github/license/Marc-Bernard-Tools/MBT-Test?label=License&color=success)](LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?color=success)](https://github.com/Marc-Bernard-Tools/.github/blob/main/CODE_OF_CONDUCT.md)
 [![REUSE Status](https://api.reuse.software/badge/github.com/Marc-Bernard-Tools/MBT-Test?color=success)](https://api.reuse.software/info/github.com/Marc-Bernard-Tools/MBT-Test)
 [![ClearlyDefined Score](https://img.shields.io/clearlydefined/score/git/github/marc-bernard-tools/mbt-test/0d4df2529cd8da727f960a8d5e082f094774a48d?label=ClearlyDefined%20Score)](https://clearlydefined.io/definitions/git/github/marc-bernard-tools/mbt-test/0d4df2529cd8da727f960a8d5e082f094774a48d)
 
