@@ -62,8 +62,7 @@ END OF BLOCK sc_tab.
 
 *-----------------------------------------------------------------------
 
-CONSTANTS:
-  c_title TYPE string VALUE /mbtools/cl_tool_bc_test=>c_tool-title.
+CONSTANTS c_title TYPE string VALUE /mbtools/cl_tool_bc_test=>c_tool-title.
 
 DATA:
   gv_ok_code TYPE sy-ucomm,
